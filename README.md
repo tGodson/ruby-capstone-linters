@@ -46,7 +46,7 @@ In order to make the program work, you need to have ruby interpreter installed i
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the <a href="https://github.com/8Bts/tic-tac-toe/issues" target="_blank">issues page</a>.
+Feel free to check the <a href="https://github.com/tGodson/ruby-capstone-linters/issues" target="_blank">issues page</a>.
 
 ## Show your support
 
