@@ -7,7 +7,7 @@ def start
   linter = LintErrorChecker.new(gem_file)
   # let's check if the Gemfile exist and has some contents in it
   if File.exist?(gem_file)
-      linter.input_gem
+    linter.input_gem
   elsif !File.exist?(gem_file)
     puts "Sorry you do not have Gemfile included in your project.
             Would you want us to create it for you?
@@ -21,5 +21,5 @@ def start
     puts 'Exiting... Bye!'.green if create_gem_input.downcase == 'n'
   end
 end
-  
-  start
+
+start

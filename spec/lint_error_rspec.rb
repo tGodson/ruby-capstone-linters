@@ -1,6 +1,5 @@
 require_relative '../lib/lint_error_checker.rb'
 require 'colorize'
-#require_relative '../spec/test_reader.rb'
 
 describe LintErrorChecker do
   let(:gem_file) { 'spec/test.txt' }
