@@ -32,7 +32,7 @@ If you do not have a "Gemfile" file in your working directory, the project will 
 
 ## Screenshot 
 
-![screenshot](./app_screenshot.png)
+![screenshot](./app_screenshot.PNG)
 
 
 ## Prerequisites
