@@ -89,7 +89,6 @@ class LintErrorChecker
       end
 
     else
-      # writing  LinterBot to check if code meets the requirements.
       all_errors.each { |x| puts x.red }
     end
   end
