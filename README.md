@@ -30,6 +30,10 @@ Make sure you have bundler installed and run:
 ## Functionalities
 If you do not have a "Gemfile" file in your working directory, the project will request to create one for you. Then ask to fill it. If you do have a gem file, The script checks if it includes at least one gem and at least one source url.
 
+## Screenshot 
+
+![screenshot](./app_screenshot.png)
+
 
 ## Prerequisites
 In order to make the program work, you need to have ruby interpreter installed in your system. You can get the latest version of ruby from [official website](https://www.ruby-lang.org/en/downloads/).
