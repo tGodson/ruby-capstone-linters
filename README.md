@@ -25,7 +25,7 @@ The rspec test files are located in the spec folder.
 
 Make sure you have bundler installed and run:
 
-- bundle exec rspec spec/bot_rspec.rb
+- bundle exec rspec spec/lint_error_spec.rb
 
 ## Functionalities
 If you do not have a "Gemfile" file in your working directory, the project will request to create one for you. Then ask to fill it. If you do have a gem file, The script checks if it includes at least one gem and at least one source url.
