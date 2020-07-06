@@ -1,4 +1,6 @@
+# spec/lint_error_spec.rb
 require_relative '../lib/lint_error_checker.rb'
+require_relative '../spec/test_reader.rb'
 require 'colorize'
 
 describe LintErrorChecker do
@@ -7,7 +9,7 @@ describe LintErrorChecker do
 
   describe '#display_gem_file' do
     @gem_file = 'spec/test.txt'
-    it 'returns to return a string containedin the file to be read.' do
+    it 'returns a string contained in the file to be read.' do
       expect(subject.display_gem_file).to eq(test_filedata)
     end
 
@@ -15,7 +17,6 @@ describe LintErrorChecker do
       expect(subject.display_gem_file.is_a?(Integer)).to eq(false)
     end
   end
-
   describe '#can_write_file?' do
     it 'returns true if the file writable' do
       expect(subject.can_write_file?).to eq(File.writable?(gem_file))
