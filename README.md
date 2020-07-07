@@ -1,44 +1,61 @@
 # ruby-capstone-linters
 
-This is a linter which checks if a Gemfile is included in the project else it creates one and and also provides you with the option to add some gem to the file.
+## Description
+This is a project which entails building a custom linter. The linter built in this project is to help beginners in javaScript check for syntax errors like forgetting the use of Var keyword when declaring variables, performing mathematical operations using floats, missing semi colon at the end of a statement, adding strings to itegers, using = sign in if conditional and forgeting to close open parenthesis.
 
 ## Built With
 
 - Ruby 2.5.5p157/2.6.6p146
 - VS Code
-- Repl.it
 - RSpec
 - Rubocop
 
-## Getting Started 
+## Getting Started
 
-This project runs on the custom Gemfile rather than the regular Gemfile
+To get a local copy up and running follow these simple example steps.
 
-Make sure you have ruby installed then:
+### Prerequisites
 
- - Click on **Clone or download** button of this repository and copy the URL(or you can just download .zip).
- - Open your command prompt and run this command: git clone COPIED-URL
- - CD into the project directory
- - run bin/main.rb
+- Ruby
+- rspec
 
-The rspec test files are located in the spec folder.
+### Usage
 
-Make sure you have bundler installed and run:
+- Clone the project to your local machine
 
-- bundle exec rspec spec/lint_error_spec.rb
+## Instructions
+- add the javascript files as described in how to use the linter above
+- Open the file of the project on your terminal, and then type bin/main.rb and press enter.
+- To run the test cases, open the root folder in your terminal and run the rspec command
 
-## Functionalities
-If you do not have a "Gemfile" file in your working directory, the project will request to create one for you. Then ask to fill it. If you do have a gem file, The script checks if it includes at least one gem and at least one source url.
+
+## How to run the linter
+
+- clone the project and add the file or files to be linted in the project directory
+- excecute the main.rb file inside bin/main.rb
+- You can as well specify the path to the files to be linted as a commandline argument e.g 
+bin/main.rb path/file_name or bin/main.rb path/directory_name
+- Note this can only be done when the javascript files are included inside the project directory
+
+## Good and Bad code
+
+## Bad code
+- `var x = 1 + 2` missing semi colon at end of statement
+- `x = 1 + 2;` missing var key word for variable declaration
+- `var x = "1" + 2;` detected adding an integer to a string
+- `var x = 1.0 + 2;` avoid using floats in mathematical operations
+- `if(x=y);` invalid comparison operator for if condition
+
+## Good code
+- `var x = 1 + 2;` 
+- `if(x==y);`
+
 
 ## Screenshot 
 
 ![screenshot](./app_screenshot.PNG)
 
-
-## Prerequisites
-In order to make the program work, you need to have ruby interpreter installed in your system. You can get the latest version of ruby from [official website](https://www.ruby-lang.org/en/downloads/).
-
-## Authors
+## Author
 
 👤 **Tendongze Godson**
 
