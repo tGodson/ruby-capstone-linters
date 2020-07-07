@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+
 require_relative '../lib/module/lint_error_checker.rb'
 
 errors = []
