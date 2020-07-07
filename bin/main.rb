@@ -1,24 +1,28 @@
-# !/usr/bin/env ruby
-require_relative '../lib/lint_error_checker.rb'
-require 'colorize'
+#!/usr/bin/env ruby
+require_relative '../lib/module/lint_error_checker.rb'
 
-def start
-  gem_file = 'Gemfile'
-  linter = LintErrorChecker.new(gem_file)
-  if File.exist?(gem_file)
-    linter.input_gem
-  elsif !File.exist?(gem_file)
-    puts "Sorry you do not have Gemfile included in your project.
-            Would you want us to create it for you?
-            Y/N".yellow
-    create_gem_input = gets.chomp
+errors = []
 
-    unless create_gem_input.downcase == 'n'
-      File.open(gem_file, 'w')
-      linter.input_gem
-    end
-    puts 'Exiting... Bye!'.green if create_gem_input.downcase == 'n'
+if ARGV.length >= 1
+  path = ARGV[0]
+  valid_path = /^[\W|\w]+.js$/
+  if valid_path.match?(path)
+    Controller.start_lint(path, errors)
+  else
+    Controller.start_lint_dir(path, errors)
+  end
+else
+  files = Controller.find_files(path)
+  if files.is_a?(String)
+    puts files
+  else
+    Controller.start_root_lint(files, errors)
   end
 end
 
-start
+if errors
+  errors.each do |error|
+    puts "#{error.type} in file #{error.line.file_name}:on line #{error.line.line_no}, #{error.msg}"
+  end
+  puts "#{errors.length} offenses detected"
+end
