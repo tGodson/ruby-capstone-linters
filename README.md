@@ -10,32 +10,33 @@ This is a project which entails building a custom linter. The linter built in th
 - RSpec
 - Rubocop
 
-## Getting Started
-
-To get a local copy up and running follow these simple example steps.
-
 ### Prerequisites
 
 - Ruby
 - rspec
 
-### Usage
+## Getting Started
 
-- Clone the project to your local machine
+To get a local copy up and running follow these simple example steps.
 
-## Instructions
-- add the javascript files as described in how to use the linter above
-- Open the file of the project on your terminal, and then type bin/main.rb and press enter.
-- To run the test cases, open the root folder in your terminal and run the rspec command
+### Setup
 
+- To Clone the project to your local machine Click on [this link](https://github.com/tGodson)
+- Click on the green clone button to your right and copy the link to the repo
+- Move to the terminal of you code editor and cd to where you want to setup your project
+- Type "git clone paste_the_copied_link_here"
+- The project is now on your local machine
 
-## How to run the linter
+## How to run the project
+- Open the terminal on your code editor
+- cd into your project folder
+- Type "bin/main" and press the enter button on your keyboard 
 
-- clone the project and add the file or files to be linted in the project directory
-- excecute the main.rb file inside bin/main.rb
-- You can as well specify the path to the files to be linted as a commandline argument e.g 
-bin/main.rb path/file_name or bin/main.rb path/directory_name
-- Note this can only be done when the javascript files are included inside the project directory
+## How to run the rspec test
+
+- open the terminal on your code editor
+- cd into your project folder
+- type "rspec" and press the enter button on your keyboard
 
 ## Good and Bad code
 
