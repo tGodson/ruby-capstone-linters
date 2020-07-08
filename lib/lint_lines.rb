@@ -13,7 +13,6 @@ class Line
     item.check_missing_var(errors, item)
     item.check_using_floats(errors, item)
     item.check_accidental_assignment(errors, item)
-    item.check_concat(errors, item)
   end
 
   def valid_line?(line)
@@ -85,34 +84,6 @@ class Line
     else
       false
     end
-  end
-
-  def check_concat(errors, line)
-    line.content.chars.each_with_index do |item, index|
-      next unless item == '+'
-
-      pos = index
-      new_str = line.content.chars[pos - 2] + line.content.chars[pos - 1] +
-                line.content.chars[pos] + line.content.chars[pos + 1] + line.content.chars[pos + 2]
-      new_str.gsub!(/\s+/, '')
-      new_str.chars.each_with_index do |value, indx|
-        next unless value == '+'
-
-        new_pos = indx
-        if new_str[new_pos - 1].include? '"'
-          unless new_str[new_pos + 1].include? '"'
-            error = LintErrors.new(line)
-            errors << error.raise_no_interger_string
-          end
-        elsif new_str[new_pos + 1].include? '"'
-          unless new_str[new_pos - 1].include? '"'
-            error = LintErrors.new(line)
-            errors << error.raise_no_interger_string
-          end
-        end
-      end
-    end
-    errors
   end
 
   def check_missing_close_parenthesis(errors, line)

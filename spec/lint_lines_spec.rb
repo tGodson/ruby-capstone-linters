@@ -67,18 +67,6 @@ describe 'Line' do
     end
   end
 
-  describe '#check_concat' do
-    it 'returns an array containing errors if errors found' do
-      arr = line_obj_cnct.check_concat(errors, line_obj_cnct)
-      expect(arr.length).to eql(1)
-    end
-
-    it 'returns an empty array if errors not found' do
-      arr = line_obj_flts.check_concat(errors, line_obj_flts)
-      expect(arr.length).to eql(0)
-    end
-  end
-
   describe '#check_missing_close_parenthesis' do
     it 'returns an array containing errors if errors found' do
       arr = line_obj_par.check_missing_close_parenthesis(errors, line_obj_par)
