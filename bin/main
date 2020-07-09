@@ -3,6 +3,7 @@
 require_relative '../lib/module/lint_error_checker.rb'
 
 errors = []
+
 if ARGV.length >= 1
   path = ARGV[0]
   valid_path = /^[\W|\w]+.js$/
