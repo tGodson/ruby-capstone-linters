@@ -3,7 +3,7 @@ require_relative '../lint_lines'
 
 module Controller
   def self.file_exist?(path)
-    File.exist?(path) ? true : "Could not find #{path} file, ensure you have entered a valid path"
+    File.exist?(path) ? true : "Could not find #{path} file, ensure you have entered a valid file path"
   end
 
   def self.dir_exist?(path)
